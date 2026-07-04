@@ -1,0 +1,430 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    height: 100vh;
+    background-image: url(home_bg.jpeg);
+    background-position: center;
+    background-size: cover;      /*بتحافظ على نسبة الأبعاد للصوره و بتخلّي صورة الخلفية تتمد وتكبر بحيث تملأ العنصر بالكامل*/
+    background-repeat: no-repeat;   
+    position: relative;   /*العنصر يفضل في مكانه الطبيعي، لكن تقدر تحرّكه عن مكانهالأصلي*/
+}
+.navbar img{
+    width:80px;
+    margin-left: 100px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+nav ul{
+    width: 400px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul a{
+    text-decoration: none;
+    list-style: none;
+}
+ul li a{
+    color: red;
+    font-weight: 600;
+}
+ul li a:hover{
+   border-bottom: 2px solid orange;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+
+}
+.content h1{
+    font-size:40px;
+    color: white;
+}
+.content p{
+    margin: 20px 0 40px;
+    color: white;
+}
+.primary-text{
+    color: orange;
+}
+header::before{
+    content: " ";
+    position:absolute;   /*  علشان ال overlayيتمركز جوا الهيدر نفسه مش الصفحه كلها  */
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+header *{
+    z-index: 10; /* يعني تخليهم فوق عناصر تانيةيعني كل العناصر اللي جوه الـ header */
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 30px;
+    border:none;
+    border-radius: 15px;
+}
+.btn-primary{
+    color: white;
+    border: solid white 1px;
+    border-radius: 10px;
+    margin: px;
+    padding: 15px 30px ;
+    text-decoration: none;
+}
+.btn-scondary{
+    color: white;
+    background-color: #383848;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    margin-top: 20px;
+}
+.btn-primary:hover,.btn-scondary:hover,.menu .btn:hover{
+    background-color: orange;
+}
+.container{
+   
+    max-width: 1100px;
+    margin: auto; /*بتوزع المسافة الفاضية يمين وشمال بالتساوي*/
+}
+.about{
+    height:80vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+.about .title, .offer .title{
+text-align: center;
+margin-bottom: 4rem;
+}
+.title h2, .gallary h2{
+    font-size: 40px;
+    color:#383848;
+    margin-bottom: 20px;
+    
+}
+.menu .title{
+    font-size: 14px;
+    font-weight: 600;
+    color: #9a9a9a;
+    text-align: center;
+margin-bottom: 4rem;
+}
+.title p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #9a9a9a;
+}
+.about-content{
+    display: flex;
+    justify-content: space-between;
+}
+.about-content img{
+    width: 450px;
+}
+.about-content p{
+    color: #9a9a9a;
+    margin-right: 7rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.offer{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(offer-background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.offer h2{
+    color: #e4b95b;
+}
+.offer .title p{
+    color: white;
+    font-weight:400;
+}
+ .offer .offers-items{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ color: white;
+   
+}
+.offer .offers-items img{
+    width: 200px;
+    
+}
+.offers-items h3{
+    font-size: 25px;
+    padding: 15px 0;
+    
+}
+.offers-items p{
+    font-size: 14px;
+     font-weight: 300;
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+.offers-items span{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.menu{
+    background: #f4f4f4;
+    padding: 5rem 0;
+}
+.menu .menu-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu-items img{
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.menu-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.menu-items h3{
+    color: #383848;
+    border-bottom: 1px dashed #c2bdbd;
+    padding-bottom: 10px;
+    position: relative;
+}
+.menu-items span{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.menu-items p{
+    margin-top: 10px;
+}
+.menu .btn{
+    display: block;
+    margin: 20px auto 0;
+    color: white;
+    background-color: #383848;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-weight: 300;
+    cursor: pointer;
+
+}
+.day-time{
+   background-image: url(daytime_bg.jpeg);
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   color: #fff;
+
+
+}
+
+
+.day-time .day-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+}
+.day-time .day-items h3{
+    font-size: 32px;
+    margin:20px 0 10px;
+   
+}
+.day-time .day-items p{
+    font-weight: 500;
+}
+.gallary{
+    background-image: url(offer-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 8rem 0 6rem;
+   
+}
+.gallary .imge-gallary img{
+    width: 280px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 20px;
+}
+.gallary h2{
+    text-align: center;
+    color: white;
+}
+.gallary .imge-gallary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0.8; /*بتتحكم في درجة شفافية العنصر كله*/
+    cursor: pointer;
+
+}
+.gallary .imge-gallary:hover{
+    opacity: 1;
+
+}
+.gallary .imge-gallary:hover div{
+    filter: blur(5px);
+}
+.gallary .imge-gallary div:hover{
+    filter: blur(0);
+    transform: scale(1.1); /* يكبر شوية */
+   box-shadow: 50px gold; /* يدي لمعة دهبية */
+}
+.contact{
+    padding: 5rem 0;
+    background: #f4f4f4;
+}
+.contact .continer{
+max-width: 900px;
+margin-left: 300px;
+}
+.contact .contact-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contact .contact-info{
+    width: 50%;
+}
+.contact .contact-info div{
+    margin: 30px 0;
+    line-height: 1.7; /*بتتحكم في المسافة بين السطور*/
+}
+.contact .contact-info h3{
+    font-size: 28px;
+    color: #383848;
+    margin-bottom: 10px;
+}
+.contact .contact-info p{
+    color: #9a9a9a;
+
+}
+.contact .contact-info i{
+    color: #e4b95b;
+    margin-right: 5px;
+}
+.contact .contact-info a i{
+    color: white;
+    background-color: #383848;
+    padding:15px ;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.contact .contact-info a i:hover{
+    background-color: #e4b95b;
+    color: #383848;
+}
+form{
+    width: 50%;
+}
+form input, textarea{
+    display: block;
+    width: 100%;
+    padding: 20px 15px; /*النص داخل الحقل مش يلصق على الحواف*/
+    margin: 20px 0;
+    border: none;
+    background-color: #e3e2dd;
+}
+.contact .btn{
+    background: #e4b95b;
+    color: white;
+    cursor: pointer;
+
+}
+.contact .btn:hover{
+    background-color: #383848;
+}
+footer{
+    background: #383848;
+    text-align: center;
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+}
+footer a{
+    color: white;
+}
+/* Reservation Section */
+.reservation {
+    padding: 60px 0;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 25px;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;/*ي محتوى يتجاوز أبعاد العنصر → يُخفى تماما*/
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.booking-table thead {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+.booking-table th,
+.booking-table td {
+    padding: 18px 20px;
+    text-align: left;
+}
+
+
+
+.booking-table tbody tr:hover {
+    background: #f7f7f7;
+}
+
+/* BOOK Button */
+.book-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff4d4d;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 10px rgba(255, 77, 77, 0.4);
+
+}
+
+.book-btn:hover {
+    background: #e63939;
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.5);
+    transform: translateY(-2px);
+}
+
